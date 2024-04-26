@@ -8,7 +8,7 @@ interface ProductsControllerInterface
 {
     public function index();
 
-    public function edit(string $id);
+    public function show(string $id);
 
     public function store(Request $request);
 

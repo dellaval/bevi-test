@@ -59,7 +59,7 @@ class ProductsController extends Controller implements ProductsControllerInterfa
      */
     public function show(string $id)
     {
-        //
+        return response()->json(Products::select('name', 'description', 'price')->find($id));
     }
 
     /**
@@ -67,7 +67,7 @@ class ProductsController extends Controller implements ProductsControllerInterfa
      */
     public function edit(string $id)
     {
-        return response()->json(Products::select('name', 'description', 'price')->find($id));
+        //
     }
 
     /**
