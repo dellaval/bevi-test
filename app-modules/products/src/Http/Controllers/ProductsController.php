@@ -102,7 +102,7 @@ class ProductsController extends Controller implements ProductsControllerInterfa
     public function destroy(string $id)
     {
         if (Products::destroy($id)){
-            return response()->noContent();
+            return response()->json(['status' => 'SUCCESS'], 200);
         }
         return response()->json(['status' => 'ERROR'], 400);
     }
